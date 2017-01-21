@@ -100,6 +100,8 @@ ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
 
 > **Note**: If you're using a Chromebook, add this line at the bottom of your settings.py file:
 > `MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'`
+> If you're using CodeAnywhere, you also need to add your Container link to the `ALLOWED_HOSTS`. It will look like this:
+> `ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com', 'django-<personalized-user-info>.codeanyapp.com']`
 
 ## Set up a database
 
@@ -157,6 +159,10 @@ If you are on a Chromebook, use this command instead:
 ```
 (myvenv) ~/djangogirls$ python manage.py runserver 0.0.0.0:8080
 ```
+{% filename %}CodeAnywhere{% endfilename %}
+```
+(myvenv) ~/djangogirls$ python manage.py runserver 0.0.0.0:3000
+```
 
 If you are on Windows and this fails with `UnicodeDecodeError`, use this command instead:
 
@@ -175,9 +181,13 @@ http://127.0.0.1:8000/
 
 If you're using a Chromebook, you'll always visit your test server by accessing:
 
-{% filename %}browser{% endfilename %}
+{% filename %}Cloud9{% endfilename %}
 ```
 https://django-girls-<your cloud9 username>.c9users.io
+```
+{% filename %}CodeAnywhere{% endfilename %}
+```
+https://django-<personal-url>.codeanyapp.com/
 ```
 
 Congratulations! You've just created your first website and run it using a web server! Isn't that awesome?
